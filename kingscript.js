@@ -14,7 +14,7 @@ let kingsNum = 0
 ////////////////////////////////
 // Functions For Game Logic Here
 document.body.style.backgroundImage =
-  "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2FLDX4QKv.jpg&f=1&nofb=1&ipt=617cec71c4eeee29bc0db2ffea676296da2bc1ca93b438653901424f74e1f3a6&ipo=images')"
+  "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.pxhere.com%2Fphotos%2F31%2Ff9%2Fcellarium_fountains_abbey_fountainsabbey_famous_building_interior_inside-144554.jpg!d&f=1&nofb=1&ipt=56034173fb18abe3d7d410a4dd5db8dfc67531c74cf41b800e47e3c39a9432d4&ipo=images')"
 
 const kingChooses = () => {
   let kingsChoice = Math.floor(Math.random() * 8)

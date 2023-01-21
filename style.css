@@ -1,9 +1,8 @@
-.changePage{
-  grid-column: 3/4;
-  grid-row: 3/4;
-  margin: 0;
-  padding: 0;
-  margin-top: -100px;
+
+.pageButtons{
+  display: block-inline;
+  text-align: center;
+  grid-column: 2 / span 1
 }
 .shield {
   background-image: url(https://www.freeiconspng.com/thumbs/shield-png/shield-png-4.png), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rendernode.com%2Fwp-content%2Fuploads%2F2018%2F03%2F13-naturalChestnut-diffuse-4096x4096-sample-1.jpg&f=1&nofb=1&ipt=78ddc9976112cb4eafea91cd279ef06bcea72bb3f70057f2e193229b5b7fc7e3&ipo=images);
@@ -54,12 +53,12 @@ h1{
 }
 .turnDisplay{
   margin-top: -100px;
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkit.com%2Fpng%2Ffull%2F10-108133_wood-png-transparent-image-png-arts-rustic-board.png&f=1&nofb=1&ipt=2be3c335410339e6390c60d7c5bd00e09e4807ce39aa1e3893f4616258894689&ipo=images);
-  background-size: cover;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F4%2FWooden-Sign-PNG-Image.png&f=1&nofb=1&ipt=a3bd1460b016e5130cbad4f50df230af4442905307d3cdc6b127198cffa6dd0c&ipo=images);
+  
   background-repeat: no-repeat;
+  background-size: 60%;
+  height: 200px;
   color: rgb(255, 255, 255);
-  height: 30px;
-  padding-top: 20px;
   font-family: 'MedievalSharp';
   text-shadow: 0px 0px 10px black;
 }
@@ -109,6 +108,7 @@ p{
   transition: all .2s;
   width: 200px;
   height: 200px;
+  border: 2px solid black
 }
 .resetButton{
   grid-column: 2/3;
@@ -125,7 +125,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 700px 1fr;
   grid-template-rows: 1fr 700px 50px;
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F90%2F4d%2F3b%2F904d3bae0723b90e534cea1c390bdda2.jpg&f=1&nofb=1&ipt=29c4452d55d1e2c6f2f1594d04fa735136806e38816815b6647ed16a2014352b&ipo=images);
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1556419%2Fpexels-photo-1556419.jpeg%3Fcs%3Dsrgb%26dl%3Dcastle-brick-old-wall-roman-wall-1556419.jpg%26fm%3Djpg&f=1&nofb=1&ipt=cdd9b2cb0569e65d8ef6c2c9475d4a1b581c50b9df9484f86c04da2f55659509&ipo=images);
   background-size: cover;
   background-repeat: no-repeat;
 }
