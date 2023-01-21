@@ -8,28 +8,56 @@ let swordWinCounter = parseInt(document.querySelector('.swordWins').innerText)
 let shieldWinCounter = parseInt(document.querySelector('.shieldWins').innerText)
 let drawCounter = parseInt(document.querySelector('#totalDraws').innerText)
 let resetButton = document.querySelector('.resetButton')
+let kingsSquare = ''
+let kingsNum = 0
 
 ////////////////////////////////
 // Functions For Game Logic Here
+document.body.style.backgroundImage =
+  "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2FLDX4QKv.jpg&f=1&nofb=1&ipt=617cec71c4eeee29bc0db2ffea676296da2bc1ca93b438653901424f74e1f3a6&ipo=images')"
+
+const kingChooses = () => {
+  let kingsChoice = Math.floor(Math.random() * 8)
+  return kingsChoice
+}
+
 const checkIfClicked = (squareParameter, i) => {
-  if (
-    squareParameter.classList.contains('sword') ||
-    squareParameter.classList.contains('shield')
-  ) {
-    alert('Already clicked fool!')
-    return
-  } else if (counter % 2 === 0) {
-    turnDisplayJs.innerText = "It is now Shield's turn"
+  if (counter % 2 === 0) {
+    if (
+      squareParameter.classList.contains('sword') ||
+      squareParameter.classList.contains('shield')
+    ) {
+      alert('Already clicked fool!')
+      return
+    }
+    turnDisplayJs.innerText = "It is now the King's turn"
     squareParameter.classList.toggle('woodBackground')
     squareParameter.classList.toggle('sword')
     testArray[i] = 'x'
     counter++
-  } else if (counter % 2 != 0) {
-    turnDisplayJs.innerText = "It is now Sword's turn"
-    squareParameter.classList.toggle('woodBackground')
-    squareParameter.classList.toggle('shield')
-    testArray[i] = 'o'
-    counter++
+    checkIfWon(testArray)
+  }
+}
+
+const kingCheckIfClicked = () => {
+  if (counter % 2 != 0) {
+    kingsNum = kingChooses()
+    kingsSquare = squares[kingsNum]
+    if (
+      kingsSquare.classList.contains('sword') ||
+      kingsSquare.classList.contains('shield')
+    ) {
+      kingsNum = kingChooses()
+      kingsSquare = squares[kingsNum]
+      kingCheckIfClicked(kingsSquare)
+    } else {
+      kingsSquare.classList.toggle('woodBackground')
+      kingsSquare.classList.toggle('shield')
+      testArray[kingsNum] = 'o'
+      counter++
+      checkIfWon(testArray)
+      turnDisplayJs.innerText = 'It is now your miserable turn.'
+    }
   }
 }
 
@@ -39,12 +67,12 @@ const swordWin = () => {
     squares[i].classList.remove('shield')
     squares[i].classList.add('woodBackground')
   }
-  alert('👑Swords Win! Yipee!👑')
+  alert('👑You Win! The crown is yours!👑')
   swordWinCounter++
   document.querySelector('.swordWins').innerText = swordWinCounter
   testArray = ['', '', '', '', '', '', '', '', '']
   counter = 0
-  turnDisplayJs.innerText = 'Play again if you dare. It is swords to move first'
+  turnDisplayJs.innerText = 'Play again if you dare. It is you to move first'
 }
 
 const shieldWin = () => {
@@ -53,12 +81,12 @@ const shieldWin = () => {
     squares[i].classList.remove('shield')
     squares[i].classList.add('woodBackground')
   }
-  alert('👑Shields Win! Yipee!👑')
+  alert('👑Bow Down. The king always wins.👑')
   shieldWinCounter++
   document.querySelector('.shieldWins').innerText = shieldWinCounter
   testArray = ['', '', '', '', '', '', '', '', '']
   counter = 0
-  turnDisplayJs.innerText = 'Play again if you dare. It is swords to move first'
+  turnDisplayJs.innerText = 'Play again if you dare. It is you to move first'
 }
 
 const userDraw = () => {
@@ -72,7 +100,7 @@ const userDraw = () => {
   document.querySelector('#totalDraws').innerText = drawCounter
   testArray = ['', '', '', '', '', '', '', '', '']
   counter = 0
-  turnDisplayJs.innerText = 'Play again if you dare. It is swords to move first'
+  turnDisplayJs.innerText = 'Play again if you dare. It is you to move first'
 }
 
 const resetGame = () => {
@@ -81,6 +109,7 @@ const resetGame = () => {
     squares[i].classList.remove('shield')
     squares[i].classList.add('woodBackground')
   }
+  testArray = ['', '', '', '', '', '', '', '', '']
 }
 
 const checkIfWon = (squareArray) => {
@@ -201,7 +230,7 @@ const checkIfWon = (squareArray) => {
 for (let i = 0; i < squares.length; i++) {
   squares[i].addEventListener('click', () => {
     checkIfClicked(squares[i], i)
-    checkIfWon(testArray)
+    setTimeout(kingCheckIfClicked, 1000)
   })
   squares[i].addEventListener('mouseenter', () => {
     squares[i].style.width = '210px'

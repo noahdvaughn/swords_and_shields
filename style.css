@@ -1,1 +1,133 @@
-/* test */
+.changePage{
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin: 0;
+  padding: 0;
+  margin-top: -100px;
+}
+.shield {
+  background-image: url(https://www.freeiconspng.com/thumbs/shield-png/shield-png-4.png), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rendernode.com%2Fwp-content%2Fuploads%2F2018%2F03%2F13-naturalChestnut-diffuse-4096x4096-sample-1.jpg&f=1&nofb=1&ipt=78ddc9976112cb4eafea91cd279ef06bcea72bb3f70057f2e193229b5b7fc7e3&ipo=images);
+  z-index: 2;
+  background-size: 85%, 500%;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 200px;
+}
+.sword {
+  max-width: 200px;
+  background-image: url(https://cdn.pixabay.com/photo/2014/04/03/10/32/swords-310788_1280.png),url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rendernode.com%2Fwp-content%2Fuploads%2F2018%2F03%2F13-naturalChestnut-diffuse-4096x4096-sample-1.jpg&f=1&nofb=1&ipt=78ddc9976112cb4eafea91cd279ef06bcea72bb3f70057f2e193229b5b7fc7e3&ipo=images) ;
+  z-index: 2;
+  background-size: 85%, 500%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.woodBackground{
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rendernode.com%2Fwp-content%2Fuploads%2F2018%2F03%2F13-naturalChestnut-diffuse-4096x4096-sample-1.jpg&f=1&nofb=1&ipt=78ddc9976112cb4eafea91cd279ef06bcea72bb3f70057f2e193229b5b7fc7e3&ipo=images);
+  background-position: center;
+  background-size: 500%;
+}
+header {
+  display: flex;
+  align-self: center;
+  grid-column: 1 / span 3;
+  align-items: center;
+}
+.scroll{
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartspub.com%2Fimages%2Fblank-banner-clipart-medieval-8.png&f=1&nofb=1&ipt=20ebf93425dbe7390f27f05d24f280a2c3f278aec0c0a1ce5a4eb7eb6068920c&ipo=images);
+  background-size: 100%;
+  width: 700px;
+  height: 275px;
+  margin-left: 90px;
+  margin-bottom: -15px;
+  align-self: center;
+  background-repeat: no-repeat;
+}
+h1{
+  padding-top: 30px;
+  padding-bottom: 0px;
+  padding-left: 0;
+  padding-right: 140px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'MedievalSharp';
+  text-shadow: 1px 0px 1px black;
+}
+.turnDisplay{
+  margin-top: -100px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkit.com%2Fpng%2Ffull%2F10-108133_wood-png-transparent-image-png-arts-rustic-board.png&f=1&nofb=1&ipt=2be3c335410339e6390c60d7c5bd00e09e4807ce39aa1e3893f4616258894689&ipo=images);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  height: 30px;
+  padding-top: 20px;
+  font-family: 'MedievalSharp';
+  text-shadow: 0px 0px 10px black;
+}
+.swordDisplay{
+  display: flex;
+  grid-column: 0/1;
+  text-align: center;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-shield-simple-14.png&f=1&nofb=1&ipt=09710678cb99c17055aa71d0d83cac4bba8718e99f441ed8c20734a61404bd72&ipo=images);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+
+}
+.shieldDisplay{
+  display:flex;
+  grid-column: 3;
+  text-align: center;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-shield-simple-14.png&f=1&nofb=1&ipt=09710678cb99c17055aa71d0d83cac4bba8718e99f441ed8c20734a61404bd72&ipo=images);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+}
+p{
+  padding-top: 50px;
+  font-family: 'MedievalSharp';
+  font-size: 40px;
+  text-shadow: 0px 0px 10px white;
+  align-self: center;
+  justify-self: center;
+}
+#mamaBoard {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  max-height: 700px;
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-content: center;
+}
+.flexItem{
+  margin: 5px;
+  transition: all .2s;
+  width: 200px;
+  height: 200px;
+}
+.resetButton{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: center;
+  margin: -30px 0 0 0;
+  font-family: 'MedievalSharp';
+  font-size: 60px;
+  text-shadow: 0px 0px 10px white;
+  padding: none;
+  transition: 0.2s;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 700px 1fr;
+  grid-template-rows: 1fr 700px 50px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F90%2F4d%2F3b%2F904d3bae0723b90e534cea1c390bdda2.jpg&f=1&nofb=1&ipt=29c4452d55d1e2c6f2f1594d04fa735136806e38816815b6647ed16a2014352b&ipo=images);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
